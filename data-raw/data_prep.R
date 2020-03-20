@@ -2,7 +2,8 @@ library(devtools)
 library(tidyverse)
 
 use_data_raw()
-UserTicks <- read.csv('../climbs.csv')
+UserTicks <- read.csv('data-raw/climbs.csv') %>%
+  select(-X.1)
 
 # remove bad dates
 UserTicks$date[UserTicks$date == '0000-00-00' |
@@ -15,4 +16,5 @@ UserTicks$date[UserTicks$date == '0000-00-00' |
 UserTicks <- UserTicks %>%
   mutate(unix_date = as.numeric(as.POSIXct(date)))
 
-use_data(UserTicks, overwrite = TRUE)
+usethis::use_data(UserTicks, overwrite = TRUE)
+
