@@ -4,7 +4,7 @@ Title: Data package of mountainproject user tick data
 Version: 0.1.0
 Author: c(person("Alex", "Fox", email="alextsfox@gmail.com", role = c("aut", "cre")))
 Maintainer: The package maintainer <alextsfox@gmail.com>
-Description: Data was obtained by pulling all ticks from all users who ticked classic climbs in each of the 50 states, and then randomely sampling users from that pool.
+Description: Anonymized data was obtained by pulling all ticks from all users who ticked classic climbs in each of the 50 states, and then randomely sampling users from that pool.
 License: MIT + file LICENSE
 Depends:R(>= 3.6)
 Encoding: UTF-8
